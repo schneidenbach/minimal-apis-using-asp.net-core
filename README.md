@@ -15,6 +15,7 @@ For the folks who are curious about the performance between the 3 methods, run t
 
 ## Presented/Presenting at:
 
+Nebraska Code 2025  
 Beer City Code August 2024  
 Kansas City Developer Conference June 2024  
 Kansas City .NET User Group July 2023  
