@@ -84,7 +84,7 @@ root.MapPost("/minimal/customers", async ([FromBody, Validate] CreateCustomerReq
    .WithTags("Customers via Minimal APIs")
    .WithMetadata(new SwaggerOperationAttribute("Creates a new customer"))
    .Produces(StatusCodes.Status201Created, responseType: typeof(Customer))
-   .Produces(StatusCodes.Status400BadRequest)
+   .ProducesValidationProblem(StatusCodes.Status400BadRequest)
    .Produces(StatusCodes.Status500InternalServerError);
 
 /*
@@ -104,7 +104,7 @@ root.MapPut("/minimal/customers/{id}", async (int id, [FromBody, Validate] Updat
    .WithTags("Customers via Minimal APIs")
    .WithMetadata(new SwaggerOperationAttribute("Updates a customer by ID"))
    .Produces(StatusCodes.Status204NoContent)
-   .Produces(StatusCodes.Status400BadRequest)
+   .ProducesValidationProblem(StatusCodes.Status400BadRequest)
    .Produces(StatusCodes.Status404NotFound)
    .Produces(StatusCodes.Status500InternalServerError);
 
